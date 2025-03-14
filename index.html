@@ -96,10 +96,10 @@
               <a target="_blank" href="https://tianhaowuhz.github.io/">Tianhao Wu</a><sup>1,2,3 *</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://jiyao06.github.io/">Jiyao Zhang</a><sup>1,2,3 **</sup>,
+              <a target="_blank" href="https://jiyao06.github.io/">Jiyao Zhang</a><sup>1,2,3 †</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="">Zeyuan Chen</a><sup>1,2 **</sup>,
+              <a target="_blank" href="">Zeyuan Chen</a><sup>1,2 †</sup>,
             </span>
             <span class="author-block">
               <a target="_blank" href="">Haotian Jin</a><sup>2</sup>,
@@ -115,18 +115,19 @@
               <a target="_blank" href="https://www.yangyaodong.com/">Yaodong Yang</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Hao Dong</a><sup>1,2,3,4</sup>
+              <a target="_blank" href="https://zsdonghao.github.io/">Hao Dong</a><sup>1,2,3,4 ✉</sup>
             </span>
           </div>
-
+  
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Center on Frontiers of Computing Studies, School of Computer Science, Peking University</span>
             <span class="author-block"><sup>2</sup>PKU-Agibot Lab, School of Computer Science, Peking University</span>
             <span class="author-block"><sup>3</sup>National Key Laboratory for Multimedia Information Processing, School of Computer Science, Peking University</span>
-            <span class="author-block"><sup>4</sup>Institute for Artificial Intelligence, Peking University</span>
+            <span class="author-block"><sup>4</sup>Institute for Artificial Intelligence, Peking University</span>;
             <span class="author-block"><sup>5</sup>Ant Research</span>
             <br>
-            <span class="author-block"><sup>*</sup>Equal contribution</span>
+            <span class="author-block"><sup>* and †</sup> Equal contribution</span>,
+            <span class="author-block"><sup>✉</sup> Corresponding author</span>
           </div>
 
           <div class="column has-text-centered">
@@ -154,7 +155,7 @@
 
             <!-- Video Link. -->
             <span class="link-block">
-              <a target="_blank" href=""
+              <a target="_blank" href="https://drive.google.com/drive/folders/1dJnF192aBb8VxeNBQRBstrCrC3GcPKho?usp=drive_link"
                   class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fas fa-microchip"></i>
@@ -170,13 +171,141 @@
                 <span class="icon">
                     <i class="fab fa-github"></i>
                 </span>
-                <span>Code</span>
+                <span>Code(Coming Soon)</span>
                 </a>
             </span>
+
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://github.com/kingchou007/adaptac-dex.git"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Teleoperation(Coming Soon)</span>
+                </a>
+            </span> -->
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <img id="teaser" src="media/figures/teaser.png" height="60%" width="60%">
+          <br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        <span class="dperact">AdpaTac-Dex</span> extracts <b>visual</b> and <b>tactile</b> features to predict future force
+        and combines it with the observed force to 
+        <br>
+        <b>adaptively</b> adjust the attention of different modalities at different stages of dexterous manipulation.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="section">
+   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Effectively utilizing multimodal data is important for a robot to generalize across diverse tasks. 
+            However, the heterogeneous nature of these modalities makes fusion challenging. 
+            Existing methods propose strategies to obtain comprehensively fused features but often 
+            ignore the fact that each modality requires different levels of attention at different manipulation stages. 
+            To address this, we propose a force-guided attention fusion module that adaptively adjusts the weights of visual and tactile features without 
+            human labeling. We also introduce a self-supervised future force prediction auxiliary task to reinforce tactile modality, 
+            improve data imbalance, and encourage proper adjustment. Our method achieves an average success rate of 93% across three fine-grained, 
+            contact-rich tasks in real-world experiments. Further analysis shows that our policy appropriately adjusts attention to each modality at different manipulation stages.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+
+  
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+    <!-- Animation. -->
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <!-- <h2 class="title is-3"><span class="dperact">Adaptac-Dex</span></h2> -->
+
+        <!-- Interpolating. -->
+        <div class="content has-text-justified">
+        <br>
+        </div>
+        <img src="media/figures/pip.png" class="interpolation-image" />
+        <br>
+        <br>
+          <p class="content has-text-justified">
+            (a) We use a pre-trained tactile encoder to encode 3D tactile signals. (b) We use a sparse encoder to encode the point cloud data. (c) The encoded visual 
+            and tactile features are used to predict the future net force. (d) The predicted future net force is combined with the observed net force to guide visual-tactile 
+            fusion through an attention mechanism. (e) The fused action feature is used as a condition for learning the dexterous manipulation policy.
+          </p>
+          
+        <br>
+        <br>
+
+        <!--/ Re-rendering. -->
+
+        <!-- <h2 class="title is-3">Interactive Visualization</h2>
+        <div class="columns">
+          <div class="column has-text-centered">
+
+            Visualize value maps for   
+            <div class="select is-small is-rounded">     
+              <select id="interative-menu" onchange="updateInteractive()">
+              <option value="hang-towel-1" selected="selected">"Hang towel on rack"</option>
+              <option value="close-drawer">"Close the top drawer."</option>
+              <option value="get-napkin">"Take out a napkin."</option>
+              <option value="open-bottle">"Turn open vitamin bottle."</option>
+              </select>
+            </div>
+          </div>
+
+        </div> 
+
+        <div class="columns">
+          <div class="column is-half has-text-centered">
+            <p style="text-align:center;">
+              <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
+                <source src="media/videos/close-drawer.mp4" type="video/mp4">
+              </video>
+            </p>
+          </div>
+          <div class="column has-text-centered">
+            <iframe id="interactive-html-1" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
+            <p style="text-align:center;">
+              Interactive Value Map 1
+            </p>
+          </div>
+          <div class="column has-text-centered" id="second-iframe-container">
+            <iframe id="interactive-html-2" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
+            <p style="text-align:center;">
+              Interactive Value Map 2
+            </p>
+          </div>
+        </div>
+         -->
+        
+        
     </div>
   </div>
 </section>
