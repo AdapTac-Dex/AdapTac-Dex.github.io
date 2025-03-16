@@ -144,7 +144,7 @@
 
             <!-- Video Link. -->
             <span class="link-block">
-              <a target="_blank" href=""
+              <a target="_blank" href="https://youtu.be/Aq34cDWNBE8"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-youtube"></i>
@@ -265,51 +265,6 @@
           
         <br>
         <br>
-
-        <!--/ Re-rendering. -->
-
-        <!-- <h2 class="title is-3">Interactive Visualization</h2>
-        <div class="columns">
-          <div class="column has-text-centered">
-
-            Visualize value maps for   
-            <div class="select is-small is-rounded">     
-              <select id="interative-menu" onchange="updateInteractive()">
-              <option value="hang-towel-1" selected="selected">"Hang towel on rack"</option>
-              <option value="close-drawer">"Close the top drawer."</option>
-              <option value="get-napkin">"Take out a napkin."</option>
-              <option value="open-bottle">"Turn open vitamin bottle."</option>
-              </select>
-            </div>
-          </div>
-
-        </div> 
-
-        <div class="columns">
-          <div class="column is-half has-text-centered">
-            <p style="text-align:center;">
-              <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
-                <source src="media/videos/close-drawer.mp4" type="video/mp4">
-              </video>
-            </p>
-          </div>
-          <div class="column has-text-centered">
-            <iframe id="interactive-html-1" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
-            <p style="text-align:center;">
-              Interactive Value Map 1
-            </p>
-          </div>
-          <div class="column has-text-centered" id="second-iframe-container">
-            <iframe id="interactive-html-2" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
-            <p style="text-align:center;">
-              Interactive Value Map 2
-            </p>
-          </div>
-        </div>
-         -->
-
-        </div>
-
         <!-- Paper video. -->
       
         <div class="container is-max-widescreen">
@@ -327,6 +282,303 @@
     </div>
   </div>
 </section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h3 class="title is-3">Generalization Performance</h3>
+      <div class="notification is-info is-light" style="margin-bottom: 1.2em; padding: 1.2rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 5px solid #3298dc;">
+        <p style="color: #2160c4; font-size: 1.1em; line-height: 1.5;"><strong style="color: #1a4b8c;">Note:</strong> The scores reported below represent the corrected and accurate results for our generalization evaluation across three tasks.</p>
+      </div>
+      <div class="content" style="margin: 2.5em auto;">
+        <p class="has-text-justified">
+          To validate the generalization of our method, we conduct experiments on all tasks using various objects with different <strong>colors</strong> and <strong>geometries</strong>,
+          and the results are shown in the table below:
+        </p>
+        <table class="table is-bordered" style="width: 80%; margin: 0 auto; border: 2px solid #363636;">
+          <thead>
+            <tr style="border: 2px solid #363636;">
+              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Task</th>
+              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Open Box</th>
+              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Reorient</th>
+              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Flip</th>
+              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Avg</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border: 2px solid #363636;">
+              <td class="has-text-centered" style="border: 2px solid #363636;">Success Rate</td>
+              <td class="has-text-centered" style="border: 2px solid #363636;">75%</td>
+              <td class="has-text-centered" style="border: 2px solid #363636;">63%</td>
+              <td class="has-text-centered" style="border: 2px solid #363636;">75%</td>
+              <td class="has-text-centered" style="border: 2px solid #363636; font-weight: bold;">71%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <h3 class="title is-4">Open Box</h3>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox1.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox2.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox3.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox4.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox5.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox6.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox7.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox8.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+      <h3 class="title is-4">Reorient</h3>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint5.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint6.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint3.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint4.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint2.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint1.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint7.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reoreint8.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <!-- <h2 class="title is-3">Generalization on Unseen Objects</h2> -->
+      
+      <h3 class="title is-4">Flip</h3>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip3.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip4.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip1.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip2.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip7.mp4", type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip8.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip5.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip6.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
 
 
