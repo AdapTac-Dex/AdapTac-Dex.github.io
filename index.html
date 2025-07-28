@@ -235,14 +235,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Effectively utilizing multimodal data is important for a robot to generalize across diverse tasks. 
-            However, the heterogeneous nature of these modalities makes fusion challenging. 
-            Existing methods propose strategies to obtain comprehensively fused features but often 
-            ignore the fact that each modality requires different levels of attention at different manipulation stages. 
-            To address this, we propose a force-guided attention fusion module that adaptively adjusts the weights of visual and tactile features without 
-            human labeling. We also introduce a self-supervised future force prediction auxiliary task to reinforce tactile modality, 
-            improve data imbalance, and encourage proper adjustment. Our method achieves an average success rate of 93% across three fine-grained, 
-            contact-rich tasks in real-world experiments. Further analysis shows that our policy appropriately adjusts attention to each modality at different manipulation stages.
+            Effectively utilizing <b>multi-sensory</b> data is important for robots to generalize across diverse tasks. However,
+            the heterogeneous nature of these modalities makes fusion
+            challenging. Existing methods propose strategies to obtain
+            comprehensively fused features but often ignore the fact that
+            each modality requires different levels of attention at different
+            manipulation stages. To address this, we propose a force-guided
+            attention fusion module that adaptively adjusts the weights of
+            visual and tactile features without human labeling. We also
+            introduce a self-supervised future force prediction auxiliary
+            task to reinforce the tactile modality, improve data imbalance,
+            and encourage proper adjustment. Our method achieves an
+            average success rate of 93% across three fine-grained, contact-rich tasks in real-world experiments. Further analysis shows
+            that our policy appropriately adjusts attention to each modality
+            at different manipulation stages.
           </p>
         </div>
       </div>
@@ -336,32 +342,42 @@
       <div class="notification is-info is-light" style="margin-bottom: 1.2em; padding: 1.2rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 5px solid #3298dc;">
         <p style="color: #2160c4; font-size: 1.1em; line-height: 1.5;"><strong style="color: #1a4b8c;">Note:</strong> The scores reported below represent the corrected and accurate results for our generalization evaluation across three tasks.</p>
       </div>
-      <div class="content" style="margin: 2.5em auto;">
-        <p class="has-text-justified">
-          To validate the generalization of our method, we conduct experiments on all tasks using various objects with different <strong>colors</strong> and <strong>geometries</strong>,
-          and the results are shown in the table below:
-        </p>
-        <table class="table is-bordered" style="width: 80%; margin: 0 auto; border: 2px solid #363636;">
-          <thead>
-            <tr style="border: 2px solid #363636;">
-              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Task</th>
-              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Open Box</th>
-              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Reorient</th>
-              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Flip</th>
-              <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Avg</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border: 2px solid #363636;">
-              <td class="has-text-centered" style="border: 2px solid #363636;">Success Rate</td>
-              <td class="has-text-centered" style="border: 2px solid #363636;">85%</td>
-              <td class="has-text-centered" style="border: 2px solid #363636;">75%</td>
-              <td class="has-text-centered" style="border: 2px solid #363636;">65%</td>
-              <td class="has-text-centered" style="border: 2px solid #363636; font-weight: bold;">75%</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="columns" style="margin: 2.5em auto;">
+        <div class="column is-one-third has-text-centered">
+          <img src="/media/videos/unseen/unseen_overview.png" class="interpolation-image" style="width: auto; height: auto;">
+        </div>
+        <div class="column is-two-thirds">
+          <div class="content">
+            <p class="has-text-justified">
+              We selected <strong>five</strong> different objects for each task, each with unique <strong>colors</strong> and <strong>geometries</strong>, and tested the policy on these objects. 
+            </p>
+            <p class="has-text-justified">
+              Each object was evaluated in <strong>four</strong> different poses. The results are presented in the table below:
+            </p>
+            <table class="table is-bordered" style="width: 100%; border: 2px solid #363636;">
+              <thead>
+                <tr style="border: 2px solid #363636;">
+                  <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Task</th>
+                  <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Open Box</th>
+                  <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Reorient</th>
+                  <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Flip</th>
+                  <th class="has-text-centered" style="width: 20%; padding: 1em; border: 2px solid #363636;">Avg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border: 2px solid #363636;">
+                  <td class="has-text-centered" style="border: 2px solid #363636;">Success Rate</td>
+                  <td class="has-text-centered" style="border: 2px solid #363636;">85%</td>
+                  <td class="has-text-centered" style="border: 2px solid #363636;">75%</td>
+                  <td class="has-text-centered" style="border: 2px solid #363636;">65%</td>
+                  <td class="has-text-centered" style="border: 2px solid #363636; font-weight: bold;">75%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+    </div>
       
       <h3 class="title is-4">Open Box</h3>
       <div class="columns">
@@ -392,6 +408,14 @@
         <div class="column has-text-centered">
           <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
             <source src="media/videos/unseen/openbox/openbox4.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox9.mp4" type="video/mp4">
           </video>
           <p style="text-align:center">
             <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
@@ -433,6 +457,15 @@
           </video>
           <p style="text-align:center">
             <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/openbox/openbox10.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
           </p>
         </div>
 
@@ -483,6 +516,14 @@
             <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
           </p>
         </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reorient9.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
       </div>
 
       <div class="columns">
@@ -519,6 +560,15 @@
           </video>
           <p style="text-align:center">
             <i class="fas fa-times" style="color: #f14668; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/reorient/reorient10.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
           </p>
         </div>
 
@@ -569,6 +619,15 @@
             <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
           </p>
         </div>
+
+                <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip9.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
       </div>
 
       <div class="columns">
@@ -602,6 +661,15 @@
         <div class="column has-text-centered">
           <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
             <source src="media/videos/unseen/flip/flip6.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline class="interpolation-image" style="width: auto; height: auto;">
+            <source src="media/videos/unseen/flip/flip10.mp4" type="video/mp4">
           </video>
           <p style="text-align:center">
             <i class="fas fa-check" style="color: #48c774; font-size: 1.5em;"></i>
